@@ -1,0 +1,25 @@
+{
+  "name": "checkInternet",
+  "version": "1.0.0",
+  "description": "Check Internet",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ping",
+    "check",
+    "internet"
+  ],
+  "author": "Oleg Nosov <nosovoleg@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osnosov/checkInternet.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "check-internet-connected": "^2.0.5",
+    "dotenv": "^8.2.0"
+  }
+}
