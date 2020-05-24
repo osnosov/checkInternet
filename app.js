@@ -22,14 +22,14 @@ let timerId = setTimeout(function request() {
             const deltaDate = (nowDate -  oldDate) / 1000;
             console.log("Internet available", deltaDate);  
             if (!connected)
-                fs.appendFileSync('log.txt', `Connected ${nowDate.toISOString()} - ${deltaDate} sec\n`);
+                fs.appendFileSync('log.txt', `Connected: ${nowDate.toISOString()}, Downtime: ${deltaDate} second\n`);
             connected = true;
             oldDate = nowDate;
         }).catch((error) => {
             const timeDisconect = (nowDate - oldDate) / 1000;
-            console.log("No internet", timeDisconect);
+            console.log("Disconnect", timeDisconect);
             if (connected)
-                fs.appendFileSync('log.txt', `No internet, disconnect ${nowDate.toISOString()} - `);
+                fs.appendFileSync('log.txt', `Disconnect: ${nowDate.toISOString()} - `);
             connected = false;
         });
     timerId = setTimeout(request, delay);
